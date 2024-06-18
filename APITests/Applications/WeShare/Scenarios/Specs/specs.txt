@@ -1,0 +1,29 @@
+## Create a new payment request
+* Create a new payment request:
+    |expenseId|fromPersonId|toPersonId|date      |amount|
+    |---------|------------|----------|----------|------|
+    |4        |3           |1         |07/12/2023|25    |
+* Get payment request with id "3"
+* Payment request(s) should match this data:
+    |id  |expenseId|fromPersonId|toPersonId|date      |amount|isPaid|
+    |----|---------|------------|----------|----------|------|------|
+    |3   |4        |3           |1         |07/12/2023|25    |false |
+
+## Find payment requests received by a person
+* Get payment requests received by person with id "3"
+* Person with id "3" has received "2" payment requests
+
+## Find payment requests sent by a person
+* Get payment requests sent by person with id "2"
+* Person with id "2" has sent "0" payment requests
+
+## Get payment request by Id
+* Get payment request with id "2"
+* Payment request(s) should match this data:
+    |id  |expenseId|fromPersonId|toPersonId|date      |amount|isPaid|
+    |----|---------|------------|----------|----------|------|------|
+    |2   |1        |1           |3         |02/12/2023|100   |false |
+
+## Recall an unpaid payment request
+* Recall payment request with id "3"
+* Get payment request with id "3" should throw an exception
